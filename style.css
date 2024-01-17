@@ -1,0 +1,115 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: url(./roxanne-rainville-moonlit-night.jpg);
+    background-position: bottom;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#btn5{
+    position: absolute;
+    background: #aaa;
+    color: #000;
+    width: 200px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    line-height: 50px;
+}
+
+#btn5::before{
+    content: 'START';
+    position: absolute;
+    width: 400%;
+    height: 400%;
+    background: #333;
+    color: white;
+    font-size: 80px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 40px;
+    top: -150%;
+    left: -150%;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 200px;
+    font-weight: bold;
+    transition: all 0.4s;
+    transform-origin: center;
+    opacity: 0;
+}
+
+#btn5:hover::before{
+    opacity: 1;
+    transform: scale(0.25);
+}
+
+   /* layer 2 ****************************   */
+
+#layer2{
+    display: none;
+}
+
+.cloud{
+    position: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    z-index: -1;
+}
+
+.stats{
+    background-image: linear-gradient(to bottom right, gray, white);
+    height: 60px;
+    z-index: 2;
+    position: relative;
+}
+
+.lifes{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    display: block;
+    width: 150px;
+    font-family: monospace;
+}
+.score{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: block;
+    width: 150px;
+    font-family: monospace;
+}
+.home{
+    padding: 20px;
+    padding-left: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+.home:hover{
+    color: #000;
+}
+
+/* results ************************  */
+
+.results{
+    display: none;
+    text-align: center;
+    background: green;
+    color: white;
+    position: absolute;
+    padding: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: cursive;
+}
